@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <title>Admin Dashboard</title>
+  </head>
+  <body class="bg-primary-subtle">
+    <nav class="navbar bg-dark-subtle shadow-sm">
+      <div class="container-fluid">
+        <a class="navbar-brand">click2work</a>
+        <div class="justify-content-end">
+          <a href="./admin.html" class="btn btn-sm btn-secondary">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-power"
+              viewBox="0 0 16 16"
+            >
+              <path d="M7.5 1v7h1V1h-1z" />
+              <path
+                d="M3 8.812a4.999 4.999 0 0 1 2.578-4.375l-.485-.874A6 6 0 1 0 11 3.616l-.501.865A5 5 0 1 1 3 8.812z"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid mt-5">
+      <div class="row justify-content-center">
+        <div class="col-md-3">
+          <div class="card bg-body-secondary shadow-lg text-center">
+            <div class="card-header bg-dark-subtle">Active Employers</div>
+            <div class="card-body bg-body-tertiary">
+              <span class="fs-1">100</span>
+            </div>
+            <a
+              href="#"
+              class="card-footer small bg-dark-subtle"
+              data-bs-toggle="modal"
+              data-bs-target="#emplist"
+              >view List</a
+            >
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card bg-body-secondary shadow-lg text-center">
+            <div class="card-header bg-dark-subtle">Registered Applicants</div>
+            <div class="card-body bg-body-tertiary">
+              <span class="fs-1">3000</span>
+            </div>
+            <a
+              href="#"
+              class="card-footer small bg-dark-subtle"
+              data-bs-toggle="modal"
+              data-bs-target="#applist"
+              >view List</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 mt-5">
+          <div class="card shadow-sm border-0 mb-3 text-bg-secondary">
+            <div class="card-header text-bg-secondary text-center">
+              <h4>For Approval</h4>
+            </div>
+            <table class="table table-sm small align-middle mb-0">
+              <tr class="table-secondary">
+                <th>Job Order Details</th>
+                <th>Company name</th>
+                <th>Action</th>
+              </tr>
+              <tr>
+                <td>
+                  <button class="btn btn-outline-light">
+                    <a 
+                    href="#" 
+                    id="#job1"
+                    class="text-decoration-none"
+                    data-bs-toggle="modal"
+                    data-bs-target="#job1"
+                      >Customer Service Representative</a
+                    >
+                  </button>
+                </td>
+                <td>
+                  <h5>Foundever</h5>
+                </td>
+                <td>                                 
+                    <a 
+                    href="#" 
+                    class="btn btn-sm btn-outline-success mx-3"
+                    id="#approve1"
+                    data-bs-toggle="modal"
+                    data-bs-target="#approve1"
+                    >Approve</a>               
+                    <a 
+                    href="#" 
+                    class="btn btn-sm btn=sm btn-outline-danger" 
+                    id="#delete1"
+                    data-bs-toggle="modal"
+                    data-bs-target="#delete1"
+                    >Delete</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <button class="btn btn-outline-light">
+                    <a 
+                    href="#" 
+                    id="#job2"
+                    class="text-decoration-none"
+                    data-bs-toggle="modal"
+                    data-bs-target="#job2"
+                      >Technical Support Representative</a
+                    >
+                  </button>
+                </td>
+                <td>
+                  <h5>Sitel Corporation</h5>
+                </td>
+                <td>
+                  <a 
+                    href="#" 
+                    class="btn btn-sm btn-outline-success mx-3"
+                    id="#approve2"
+                    data-bs-toggle="modal"
+                    data-bs-target="#approve2"
+                    >Approve</a>               
+                    <a 
+                    href="#" 
+                    class="btn btn-sm btn-outline-danger" 
+                    id="#delete2"
+                    data-bs-toggle="modal"
+                    data-bs-target="#delete2"
+                    >Delete</a>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!----------Modal Section------------->
+
+    <!---Employee List-->
+    <div
+      class="modal fade"
+      id="emplist"
+      data-bs-backdrop="static"
+      tabindex="-1"
+      aria-hidden="true"
+      style="backdrop-filter: blur(5px)"
+    >
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header text-bg-secondary text-center">
+            <h5 class="modal-title">List of Registered Employers</h5>
+            <button
+              type="button"
+              class="btn-close btn-outline-dark"
+              data-bs-dismiss="modal"
+              aria-label="close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-decoration-none">Concentrix</a></li>
+              <li><a href="#" class="text-decoration-none">VXI Global</a></li>
+              <li><a href="#" class="text-decoration-none">Teleperformance</a></li>
+              <li><a href="#" class="text-decoration-none">TeleTech</a></li>
+              <li><a href="#" class="text-decoration-none">Sutherland Global Services</a></li>
+              <li><a href="#" class="text-decoration-none">Sitel</a></li>
+              <li><a href="#" class="text-decoration-none">Telus </a></li>
+              <li><a href="#" class="text-decoration-none">SixEleven</a></li>
+              <li><a href="#" class="text-decoration-none">TaskUs</a></li>
+              <li><a href="#" class="text-decoration-none">IBM Solutions Delivery</a></li>
+              <li><a href="#" class="text-decoration-none">Hinduja Global Solutions (HGS)</a></li>
+              <li><a href="#" class="text-decoration-none">IBEX Global</a></li>
+              <li><a href="#" class="text-decoration-none">Transcom Asia</a></li>
+              <li><a href="#" class="text-decoration-none">Alorica</a></li>
+              <li><a href="#" class="text-decoration-none">24/7 Customer</a></li>
+              <li><a href="#" class="text-decoration-none">Genpact Services</a></li>
+              <li><a href="#" class="text-decoration-none">Conduent</a></li>
+              <li><a href="#" class="text-decoration-none">Accenture</a></li>
+              <li><a href="#" class="text-decoration-none">SPi Technologies</a></li>
+              <li><a href="#" class="text-decoration-none">Startek</a></li>
+              <li><a href="#" class="text-decoration-none">Wipro</a></li>
+              <li><a href="#" class="text-decoration-none">Optum</a></li>
+              <li><a href="#" class="text-decoration-none">PITON Global</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!---Applicants List-->
+    <div
+      class="modal fade"
+      id="applist"
+      data-bs-backdrop="static"
+      tabindex="-1"
+      aria-hidden="true"
+      style="backdrop-filter: blur(5px)"
+    >
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header text-bg-secondary text-center">
+            <h5 class="modal-title">List of Registered Applicants</h5>
+            <button
+              type="button"
+              class="btn-close btn-outline-dark"
+              data-bs-dismiss="modal"
+              aria-label="close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-decoration-none">John Stone</a></li>
+              <li><a href="#" class="text-decoration-none">Ponnappa Priya</a></li>
+              <li><a href="#" class="text-decoration-none">Mia Wong</a></li>
+              <li><a href="#" class="text-decoration-none">Peter Stanbridge</a></li>
+              <li><a href="#" class="text-decoration-none">Natalie Lee-Walsh</a></li>
+              <li><a href="#" class="text-decoration-none">Ang Li</a></li>
+              <li><a href="#" class="text-decoration-none">Nguta Ithya </a></li>
+              <li><a href="#" class="text-decoration-none">Tamzyn French</a></li>
+              <li><a href="#" class="text-decoration-none">Salome Simoes</a></li>
+              <li><a href="#" class="text-decoration-none">Trevor Virtue</a></li>
+              <li><a href="#" class="text-decoration-none">Tarryn Campbell-Gillies</a></li>
+              <li><a href="#" class="text-decoration-none">Eugenia Anders</a></li>
+              <li><a href="#" class="text-decoration-none">Andrew Kazantzis/a></li>
+              <li><a href="#" class="text-decoration-none">Verona Blair</a></li>
+              <li><a href="#" class="text-decoration-none">Jane Meldrum</a></li>
+              <li><a href="#" class="text-decoration-none">Maureen M. Smith</a></li>
+              <li><a href="#" class="text-decoration-none">Desiree Burch</a></li>
+              <li><a href="#" class="text-decoration-none">Daly Harry</a></li>
+              <li><a href="#" class="text-decoration-none">Hayman Andrews</a></li>
+              <li><a href="#" class="text-decoration-none">Hayman Andrews</a></li>
+              <li><a href="#" class="text-decoration-none">Hayman Andrews</a></li>
+              <li><a href="#" class="text-decoration-none">Ruveni Ellawala</a></li>
+              <li><a href="#" class="text-decoration-none">Ruveni Ellawala</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!---Job Order Modal--->
+
+    <!--Job #1-->
+    <div 
+    class="modal fade"
+    id="job1"
+    data-bs-backdrop="static"
+    tabindex="-1"
+    aria-hidden="true"
+    style="backdrop-filter: blur(5px);">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">    
+      <div class="modal-header text-bg-secondary">
+        <h5 class="modal-title">Job Order Details</h5>
+        <button
+        type="button"
+        class="btn-close btn-outline-dark"
+        data-bs-dismiss="modal"
+        aria-label="close">
+      </button>
+      </div>
+      <div class="modal-body">
+        <table class="table table-bordered small mb-0">
+          <tr>
+            <th class="w-50">Job Name</th>
+            <td>Customer Service Representative</td>
+          </tr>
+          <tr>
+            <th class="w-50">Vacant Position</th>
+            <td>30 persons</td>
+          </tr>
+          <tr>
+            <th class="w-50">Qualifications</th>
+            <td>
+              <p>18 yrs old above </p>
+              <p>atleast highschool graduate </p>
+              <p>with or without experience </p>
+            </td>            
+          </tr>
+        </table>
+      </div>
+    </div>
+    </div>
+    </div>
+
+    <!--Job #2-->
+    <div 
+    class="modal fade"
+    id="job2"
+    data-bs-backdrop="static"
+    tabindex="-1"
+    aria-hidden="true"
+    style="backdrop-filter: blur(5px);">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">    
+      <div class="modal-header text-bg-secondary">
+        <h5 class="modal-title">Job Order Details</h5>
+        <button
+        type="button"
+        class="btn-close btn-outline-dark"
+        data-bs-dismiss="modal"
+        aria-label="close">
+      </button>
+      </div>
+      <div class="modal-body">
+        <table class="table table-bordered small mb-0">
+          <tr>
+            <th class="w-50">Job Name</th>
+            <td>Technical Support Representative</td>
+          </tr>
+          <tr>
+            <th class="w-50">Vacant Position</th>
+            <td>30 persons</td>
+          </tr>
+          <tr>
+            <th class="w-50">Qualifications</th>
+            <td>
+              <p>18 yrs old above </p>
+              <p>completed atleast 2nd year in college </p>
+              <p>experience is an advantage but not required</p>
+            </td>            
+          </tr>
+        </table>
+      </div>
+    </div>
+    </div>
+    </div>
+
+    <!--Delete Modal-->
+
+    <div 
+    class="modal fade"
+    id="delete1"
+    data-bs-backdrop="static"
+    tabindex="-1"
+    aria-hidden="true"
+    style="backdrop-filter: blur(5px);">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">    
+      <div class="modal-body text=text-center d-flex justify-content-between align-items-center">
+        <h4 class="fw-bold m-0">Are you sure you want to delete this application?</h4>
+        <button
+        type="button"
+        class="btn-close ms-auto"
+        data-bs-dismiss="modal"
+        aria-label="close"></button>
+      </div>
+       <div class="modal-footer d-flex justify-content-between">
+        <button
+        type="button"
+        class="btn btn-sm btn-warning"
+        data-bs-dismiss="modal"
+        aria-label="close"
+        >Cancel
+        </button>
+        <a
+        href="#"
+        class="btn btn-sm btn-danger"
+        >
+        Delete
+        </a>
+       </div>
+    </div>
+    </div>
+    </div>
+
+    <div 
+    class="modal fade"
+    id="delete2"
+    data-bs-backdrop="static"
+    tabindex="-1"
+    aria-hidden="true"
+    style="backdrop-filter: blur(5px);">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">    
+      <div class="modal-body text=text-center d-flex justify-content-between align-items-center">
+        <h4 class="fw-bold m-0">Are you sure you want to delete this application?</h4>
+        <button
+        type="button"
+        class="btn-close ms-auto"
+        data-bs-dismiss="modal"
+        aria-label="close"></button>
+      </div>
+       <div class="modal-footer d-flex justify-content-between">
+        <button
+        type="button"
+        class="btn btn-sm btn-warning"
+        data-bs-dismiss="modal"
+        aria-label="close"
+        >Cancel
+        </button>
+        <a
+        href="#"
+        class="btn btn-sm btn-danger"
+        >
+        Delete
+        </a>
+       </div>
+    </div>
+    </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+
+.bg-img {  
+  object-fit: cover;
+  background-color: darkgray;
+}
+
+h1 {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.list-group-item > a {
+  color: #333;
+  text-decoration: none;
+  font-size: 10px;
+  text-align: center;
+  
+
+}
